@@ -1,16 +1,13 @@
 module.exports = (db) => {
   const schema = db.Schema({
-    title: {
-      type: String,
-      required: true,
-    },
-    author: String,
-    year: Number,
+    userId: String,
+    userName: String,
+    prize: String,
     createdAt: {
       type: Date,
       default: Date.now,
     },
   });
 
-  return db.models.Books || db.model('Books', schema);
+  return db.models.Gacha || db.model('Gacha', schema);
 };
